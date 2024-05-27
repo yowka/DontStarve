@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'Exo';
+  src: url('src/assets/fonts/Exo2-Light.ttf');
+}
+*{
+  font-family: 'Exo', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.wrapper{
+  background: url("/src/assets/image/back.jpg") fixed center no-repeat;
+  background-size: cover;
+  height: 1080px;
+}
