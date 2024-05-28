@@ -11,9 +11,33 @@
         <p>practise</p>
         <div class="update">
           <div class="meta_update">
-            <img alt="#" src="/src/assets/image/dont-starve-shipwrecked.jpg"/>
+            <a href="#"><img alt="#" src="/src/assets/image/dont-starve-shipwrecked.jpg"/></a>
           </div>
-          <div>asfdad</div>
+          <div class="mini_block">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <span>Не голодайте вместе</span>
+        <div class="content_main">
+          <div class="content">
+            <p>Don't Starve Together — это автономное многопользовательское расширение бескомпромиссной игры на выживание в дикой природе Don't Starve.
+              Теперь включая Reign of Giants; добавление новых персонажей, времен года, существ, биомов и новых гигантских испытаний в Don't Starve Together.</p>
+            <p>Войдите в странный и неизведанный мир, полный странных существ, опасностей и сюрпризов. Собирайте ресурсы для создания предметов и построек,
+              соответствующих вашему стилю выживания. Играйте по-своему, разгадывая тайны этой странной земли.
+            </p>
+            <p>Сотрудничайте с друзьями в приватной игре или рискните с незнакомцами в Интернете. Работайте вместе с другими игроками, чтобы выжить в суровых условиях,
+              или действуйте самостоятельно. Делайте все возможное, но самое главное – не голодайте.
+            </p>
+          </div>
+          <div class="general_main">
+            <div class="img_main">
+
+            </div>
+            <button><a href="#">ываываыва</a></button>
+          </div>
         </div>
       </div>
       <aside class="aside_block">
@@ -64,7 +88,35 @@
   display: grid;
   grid-template-columns: 3fr 1fr;
 }
+.content p{
+  margin-top: 20px;
+}
 .meta_update img{
   width: 98%;
+}
+img{
+  border-radius: 20px;
+}
+.content_main{
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+}
+.general_main{
+  background: darkgray;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.general_main a{
+  text-decoration: none;
+  color: black;
+  border: none;
+}
+.img_main{
+  background: url("/src/assets/image/reign.webp") no-repeat center center;
+  background-size: cover;
+  border-radius: 20px 20px 0 0;
+  height: 50%;
 }
 </style>
