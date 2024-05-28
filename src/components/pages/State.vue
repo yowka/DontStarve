@@ -5,7 +5,16 @@
   <div class="general">
     <div class="container_block">
       <div class="main_block">
-        fdghdfh
+        <div class="main_block_inner">
+          <p>Добро пожаловать на страницу Don't Starve</p>
+        </div>
+        <p>practise</p>
+        <div class="update">
+          <div class="meta_update">
+            <img alt="#" src="/src/assets/image/dont-starve-shipwrecked.jpg"/>
+          </div>
+          <div>asfdad</div>
+        </div>
       </div>
       <aside class="aside_block">
         <img alt="#" src="/src/assets/image/trailer.jpg"/>
@@ -43,5 +52,19 @@
 }
 .aside_block{
   width: 90%;
+}
+.main_block_inner {
+  width: 90%;
+  background: white;
+  border-radius: 20px;
+  padding: 16px;
+  text-align: center;
+}
+.update{
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+.meta_update img{
+  width: 98%;
 }
 </style>

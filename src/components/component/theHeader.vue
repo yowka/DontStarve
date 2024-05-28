@@ -29,10 +29,6 @@
   justify-content: space-around;
 
 }
-.general::before{
-  background:url("/src/assets/image/logotype.png") no-repeat ;
-  height:18px;
-}
 .link,.link3{
   color: #3C0D2A;
   font-size: 40px;
