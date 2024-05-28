@@ -44,7 +44,4 @@
 .aside_block{
   width: 90%;
 }
-.container_block img{
-
-}
 </style>
