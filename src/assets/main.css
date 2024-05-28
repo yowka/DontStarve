@@ -11,5 +11,5 @@
 .wrapper{
   background: url("/src/assets/image/back.jpg") fixed center no-repeat;
   background-size: cover;
-  height: 1080px;
+  height: 100%;
 }
