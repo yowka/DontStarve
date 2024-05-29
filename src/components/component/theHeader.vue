@@ -23,7 +23,7 @@
 .head{
   margin: 0 auto;
   background: #7d5e5e;
-  height: 200px;
+  height: 120px;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -39,7 +39,7 @@
 }
 .logo{
   width: 240px;
-  height: 200px;
+  height: 120px;
   background: url("/src/assets/image/logotype.png") no-repeat center center;
   background-size: cover;
 }
