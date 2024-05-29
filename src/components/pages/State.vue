@@ -1,5 +1,11 @@
-<script setup>
-
+<script >
+export default {
+  data(){
+    return{
+      isActive :false
+    }
+  }
+}
 </script>
 <template>
   <div class="general">
@@ -16,22 +22,22 @@
             <img alt="#" src="/src/assets/image/Scrappy.webp"/>
           </div>
           <div class="mini_block">
-            <div>
-<!--              <img  alt="#"/>-->
-              <p>Wiki</p>
-            </div>
-            <div>
-<!--              <img  alt="#"/>-->
-              <p>Translate</p>
-            </div>
-            <div>
-<!--              <img  alt="#"/>-->
-              <p>Helper</p>
-            </div>
-            <div>
-<!--              <img  alt="#"/>-->
-              <p>Search</p>
-            </div>
+            <a href="https://dont-starve.fandom.com/ru/wiki/Don%27t_Starve_wiki" target="_blank">
+              <img src="/src/assets/image/rules.webp" alt="#"/>
+              <p>Википедия</p>
+            </a>
+            <a href="https://dont-starve.fandom.com/ru/wiki/Don%27t_Starve_%D0%B2%D0%B8%D0%BA%D0%B8:%D0%9F%D0%B5%D1%80%D0%B5%D0%B2%D0%BE%D0%B4" target="_blank">
+              <img src="/src/assets/image/translate.webp" alt="#"/>
+              <p>Переводчик</p>
+            </a>
+            <a href="https://dont-starve.fandom.com/ru/wiki/Don%27t_Starve_%D0%B2%D0%B8%D0%BA%D0%B8:%D0%90%D0%B4%D0%BC%D0%B8%D0%BD%D0%B8%D1%81%D1%82%D1%80%D0%B0%D1%86%D0%B8%D1%8F" target="_blank">
+              <img src="/src/assets/image/admin.webp" alt="#"/>
+              <p>Админы</p>
+            </a>
+            <a href="https://dont-starve.fandom.com/ru/f?catId=2862106564880237771" target="_blank">
+              <img src="/src/assets/image/search.webp" alt="#"/>
+              <p>Поиск игроков</p>
+            </a>
           </div>
         </div>
         <span class="survive">Не голодайте вместе</span>
@@ -48,34 +54,71 @@
           </div>
           <div class="general_main">
             <div class="img_main">
-
             </div>
+            <p>Правление новой королевы теней пронеслось по землям Don't Starve и теперь проникает глубоко в недра земли.</p>
             <router-link class="link" to="/about">Подробнее</router-link>
           </div>
         </div>
       </div>
       <aside class="aside_block">
-        <img alt="#" src="/src/assets/image/trailer.jpg"/>
+        <button class="play_video" @click="isActive = true">
+          <img typeof="foaf:Image" src="https://www.klei.com/sites/default/files/games/dont-starve-together/assets/dont-starve-togethervideoplayimg_0.gif" width="100%" alt="">
+        </button>
+        <div v-if="isActive" class="video_container">
+          <iframe class="video" width="560" height="315"
+                  src="https://www.youtube.com/embed/fXP4_2qRHng?si=tzqiKuWFkqAPXG5p" title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+          </iframe>
+          <button class="close_video" @click="isActive = false">X</button>
+        </div>
+        <div class="cards">
+          <div class="card1"></div>
+          <div class="card2"></div>
+          <div class="card3"></div>
+        </div>
       </aside>
+
     </div>
   </div>
 </template>
 
 <style scoped>
+.cards{
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+  div{
+    background-size:cover;
+  }
+}
+.card1{
+  background: url("/src/assets/image/webber.png") no-repeat;
+}
+.card2{
+  background: url("/src/assets/image/dragon-fly.png") no-repeat;
+}
+.card3{
+  background: url("/src/assets/image/winter.png") no-repeat;
+}
 .mini_block{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
+  gap: 10px;
 }
 .general{
   padding: 60px;
+  position: relative;
 }
 .container_block {
   border-radius: 20px;
   margin: 0 auto;
   width: 88%;
   background: rgb(234, 222, 200 ,0.9);
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 3fr 1.4fr;
   display: grid;
   justify-items: center;
   align-items: center;
@@ -110,6 +153,9 @@
   border-radius: 20px;
   padding: 16px;
   text-align: center;
+  span{
+    font-size: 22px;
+  }
 }
 .update{
   gap: 60px;
@@ -122,6 +168,9 @@
 }
 .meta_update img{
   width: 100%;
+  object-fit: cover;
+  object-position: bottom;
+  height: 100%;
 }
 img{
   border-radius: 20px;
@@ -152,10 +201,16 @@ img{
     text-decoration: none;
     color: darkslategrey;
   }
+  p{
+    color: black;
+    text-align: center;
+    white-space: break-spaces;
+  }
 }
 .survive{
   color: rgb(255, 247, 98);
   padding: 18px;
+  font-size: 22px;
 }
 .img_main {
   background: url("/src/assets/image/reign.jpg") no-repeat center center;
@@ -163,11 +218,47 @@ img{
   border-radius: 20px 20px 0 0;
   height: 50%;
 }
-.mini_block div{
+.mini_block a{
   background: lavenderblush;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  border-radius: 10px;
+  text-decoration: none;
+  padding: 5px;
+  width: 100%;
+  p{
+    color: black;
+    text-align: center;
+  }
+}
+.play_video{
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.video_container{
+  position: absolute;
+  height: 315px;
+  display: flex;
+  justify-content: end;
+}
+.close_video{
+  background: yellow;
+  position: absolute;
+  width: 40px;
+  height: 20px;
+  z-index: 100;
+  background: none;
+  border: solid 2px white;
+  border-radius: 0 20px 0 0;
+  color: white;
+}
+.video{
+  border: solid 2px black;
+  margin-bottom: 130px;
+  border-radius: 20px;
+  position: relative;
 }
 </style>
