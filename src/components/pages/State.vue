@@ -78,7 +78,6 @@ export default {
           <div class="card3"></div>
         </div>
       </aside>
-
     </div>
   </div>
 </template>
