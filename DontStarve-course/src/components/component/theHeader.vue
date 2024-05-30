@@ -12,7 +12,8 @@
           <router-link class="link" to="/about">Подробнее</router-link>
         </div>
         <div>
-          <button class="buy"><a href="https://store.steampowered.com/app/322330/Dont_Starve_Together/?l=russian" target="_blank">Купить игру</a></button>
+          <router-link class="link3" to="/register"><button>Войти</button></router-link>
+          <router-link class="link" to="/register"><button>Регистрация</button></router-link>
         </div>
       </div>
   </div>
@@ -28,16 +29,13 @@
   justify-content: space-around;
 
 }
-.link,.buy a{
+.link,.link3{
   color: #3C0D2A;
   font-size: 40px;
   text-decoration: none;
 }
-.buy{
+.link3{
   margin-right: 30px;
-  a{
-    padding: 20px;
-  }
 }
 .logo{
   width: 240px;
@@ -45,7 +43,7 @@
   background: url("/src/assets/image/logotype.png") no-repeat center center;
   background-size: cover;
 }
-.buy{
+.link button,.link3 button{
   font-size: 30px;
   background: rgb(256,256,256,0.4);
   border-radius: 5px;

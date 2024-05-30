@@ -59,6 +59,10 @@ export default {
             <router-link class="link" to="/about">Подробнее</router-link>
           </div>
         </div>
+        <div class="novice">
+          <div class="novice_text"><span>Новичкам</span></div>
+          <div></div>
+        </div>
       </div>
       <aside class="aside_block">
         <button class="play_video" @click="isActive = true">
@@ -84,35 +88,46 @@ export default {
 </template>
 
 <style scoped>
+.novice {
+  width: 70%;
+  background: lavender;
+  margin-top:30px;
+}
+.novice_text{
+  text-align: center;
+  padding: 10px;
+}
 .cards{
   margin-top: 40px;
   display: grid;
   grid-template-columns: 1fr;
   gap: 10px;
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 95%;
   div:not(:nth-child(2)){
-    transition: 0.5s all ease;
-    border-radius: 20px;
+    transition: 1s all ease-in-out;
     &:hover{
-      transform: scale(1.14) rotate(2deg);
+      transform: scale(1.1) rotate(2deg);
     }
+  }
+  div{
+    height:290px;
+    border-radius: 20px;
+    background-size: cover;
   }
 }
 .card1{
-  background: url("/src/assets/image/webber.png") no-repeat;
+  background: url("/src/assets/image/dragon-fly.png") no-repeat;
 }
 .card2{
-  background: url("/src/assets/image/dragon-fly.png") no-repeat;
-  transition: 0.5s all ease;
-  background-size:cover;
-  border-radius: 20px;
+  background: url("/src/assets/image/webber.png") no-repeat;
+  transition: 1s all ease-in-out;
   &:hover{
-    transform: scale(1.14) rotate(-2deg);
+    transform: scale(1.15) rotate(-2deg);
   }
 }
 .card3{
-  background: url("/src/assets/image/winter.png") no-repeat center;
+  background: url("/src/assets/image/winter.png") no-repeat;
 }
 .mini_block{
   display: grid;
@@ -156,6 +171,7 @@ export default {
 }
 .aside_block{
   width: 90%;
+  padding-bottom: 60px;
 }
 .main_block_inner {
   width: 90%;
