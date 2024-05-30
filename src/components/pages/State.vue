@@ -66,7 +66,7 @@ export default {
         </button>
         <div v-if="isActive" class="video_container">
           <iframe class="video" width="560" height="315"
-                  src="https://www.youtube.com/embed/fXP4_2qRHng?si=tzqiKuWFkqAPXG5p" title="YouTube video player" frameborder="0"
+                  src="https://www.youtube.com/embed/fXP4_2qRHng?si=tzqiKuWFkqAPXG5p" title="YouTube video player"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
           </iframe>
