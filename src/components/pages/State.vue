@@ -59,6 +59,23 @@ export default {
             <router-link class="link" to="/about">Подробнее</router-link>
           </div>
         </div>
+        <div class="novice">
+          <div><span class="novice_block">Новичку</span></div>
+        </div>
+        <div class="info_novice">
+          <div class="info_block">
+            <p>Помогайте</p>
+            <p>Не бойтесь исправить ошибку в статье или ответить на чей-то комментарий, оставленный без ответа другими участниками.</p>
+          </div>
+          <div class="info_block">
+            <p>Кому писать?</p>
+            <p>В случае возникновения проблем или предложений вы можете написать любому представителю <a href="#"><i>администрации.</i></a></p>
+          </div>
+          <div class="info_block">
+            <p>Будьте вежливы</p>
+            <p>При общении на вики и редактировании статей необходимо соблюдать этикет и<a href="#"><i>правила.</i></a></p>
+          </div>
+        </div>
       </div>
       <aside class="aside_block">
         <button class="play_video" @click="isActive = true">
@@ -83,6 +100,37 @@ export default {
 </template>
 
 <style scoped>
+.novice{
+  background: lavenderblush;
+  width: 72%;
+  padding: 20px;
+  margin-top: 30px;
+  text-align: center;
+  font-size: 21px;
+  border-radius: 10px;
+}
+.info_novice{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  width: 90%;
+  padding: 20px;
+  .info_block{
+    background: lightgray;
+    border-radius: 5px;
+    p{
+      padding: 10px;
+      text-align: center;
+      word-break: break-all;
+    }
+    p:first-child{
+      border-bottom: solid 2px black;
+    }
+    a{
+      text-decoration: none;
+    }
+  }
+}
 .cards{
   margin-top: 40px;
   display: grid;
@@ -91,8 +139,8 @@ export default {
   width: 100%;
   height: 100%;
   div:not(:nth-child(2)){
-    transition: 0.5s all ease;
     border-radius: 20px;
+    transition: 0.5s all ease;
     &:hover{
       transform: scale(1.14) rotate(2deg);
     }
@@ -143,15 +191,13 @@ export default {
 }
 .main_block{
   width: 96%;
-  p{
-    color: lightgray;
-  }
 }
 .more{
   margin: 0 auto;
   padding: 30px;
   text-align: center;
   width: 75%;
+  color: lightgray;
 }
 .aside_block{
   width: 90%;
@@ -192,6 +238,9 @@ img{
   text-align: center;
   width: 80%;
   margin: 0  auto;
+  p{
+    color: lightgray;
+  }
 }
 .general_main {
   background: darkgray;
@@ -246,12 +295,17 @@ img{
   background: none;
   border: none;
   cursor: pointer;
+  transition: 0.5s all ease;
+  &:hover{
+    transform: scale(1.14)  ;
+  }
 }
 .video_container{
   position: absolute;
   height: 315px;
   display: flex;
   justify-content: end;
+
 }
 .close_video{
   background: yellow;
